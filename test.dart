@@ -1,5 +1,5 @@
 void main() {
-  String name = "Behzad";
+  String name = "Sina";
 if(name != "Ali"){
   print("Access Denied");
 }
