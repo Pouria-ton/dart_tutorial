@@ -1,20 +1,29 @@
-void main() {
-  List<int> grades = [85, 72, 91, 64, 78];
+void analyzeNumbers(List<int> numbers) {
+  int positiveCount = 0;
+  int negativeCount = 0;
+  int evenCount = 0;
+  int positiveSum = 0;
 
-  int total = 0;
-  int passed = 0;
+  for (int number in numbers) {
+    if (number > 0) {
+      positiveCount++;
+      positiveSum += number;
+    } else if (number < 0) {
+      negativeCount++;
+    }
 
-  for (int i = 0; i < grades.length; i++) {
-    total += grades[i];
-
-    if (grades[i] >= 60) {
-      passed++;
+    if (number % 2 == 0) {
+      evenCount++;
     }
   }
 
-  double average = total / grades.length;
+  print(positiveCount);
+  print(negativeCount);
+  print(evenCount);
+  print(positiveSum);
+}
 
-  print("Average: $average");
-  print("Passed: $passed/${grades.length}");
+void main() {
+  analyzeNumbers([4, -3, 7, 2, -8, 5, 10]);
 }
   
