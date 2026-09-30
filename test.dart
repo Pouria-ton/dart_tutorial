@@ -1,29 +1,36 @@
-void analyzeNumbers(List<int> numbers) {
-  int positiveCount = 0;
-  int negativeCount = 0;
-  int evenCount = 0;
-  int positiveSum = 0;
+void main() {
+  Map<String, int> scores = {
+    "Bob": 100,
+    "Mia": 72,
+    "Jessie": 85,
+    "Leo": 55,
+    "Ash": 91,
+  };
 
-  for (int number in numbers) {
-    if (number > 0) {
-      positiveCount++;
-      positiveSum += number;
-    } else if (number < 0) {
-      negativeCount++;
+  int highScores = 0;
+  int lowScores = 0;
+  int total = 0;
+  int max = 0;
+  String maxName = "";
+
+  for (var entry in scores.entries) {
+    if (entry.value >= 80) {
+      highScores++;
+    } else {
+      lowScores++;
     }
 
-    if (number % 2 == 0) {
-      evenCount++;
+    total += entry.value;
+
+    if (entry.value > max) {
+      max = entry.value;
+      maxName = entry.key;
     }
   }
 
-  print(positiveCount);
-  print(negativeCount);
-  print(evenCount);
-  print(positiveSum);
-}
-
-void main() {
-  analyzeNumbers([4, -3, 7, 2, -8, 5, 10]);
+  print("High scores: $highScores");
+  print("Low scores: $lowScores");
+  print("Total: $total");
+  print("Highest: $maxName - $max");
 }
   
