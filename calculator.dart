@@ -1,3 +1,5 @@
+import 'dart:io';
+
 void main() {
   print("Enter first number:");
   int num1 = int.parse(stdin.readLineSync()!);
@@ -16,5 +18,5 @@ void main() {
     print(num1 * num2);
   } else if (operation == "/") {
     print(num1 / num2);
-  }
+  };
 }
