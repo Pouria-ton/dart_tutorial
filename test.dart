@@ -1,33 +1,25 @@
 void main() {
-  List<Map<String, dynamic>> players = [
-    {"name": "Alex", "score": 85, "wins": 7},
-    {"name": "Mia", "score": 72, "wins": 5},
-    {"name": "Leo", "score": 91, "wins": 9},
-    {"name": "Sara", "score": 64, "wins": 4},
+  List<Map<String, dynamic>> students = [
+    {"name": "Alex", "score": 85},
+    {"name": "Mia", "score": 72},
+    {"name": "Leo", "score": 91},
+    {"name": "Sara", "score": 64},
   ];
 
-  int highScorePlayers = 0;
-  int totalWins = 0;
-  int highestScore = 0;
-  String bestPlayer = "";
+  int highScorers = 0;
+  Set<String> studentNames = {};
 
-  for (var player in players) {
-    print("Player: ${player["name"]}");
+  for (var student in students) {
+    print("${student["name"]} - ${student["score"]}");
 
-    if (player["score"] >= 80) {
-      highScorePlayers++;
+    if (student["score"] >= 80) {
+      print("High scorer: ${student["name"]}");
+      highScorers++;
     }
 
-    totalWins += player["wins"] as int;
-
-    if (player["score"] > highestScore) {
-      highestScore = player["score"];
-      bestPlayer = player["name"];
-    }
+    studentNames.add(student["name"]);
   }
 
-  print("");
-  print("Players with 80+ score: $highScorePlayers");
-  print("Total wins: $totalWins");
-  print("Best player: $bestPlayer - $highestScore");
+  print("High scorers: $highScorers");
+  print("Student names: $studentNames");
 }
