@@ -1,17 +1,19 @@
-class Book {
-  String title;
-  int pages;
+class Student {
+  String name;
+  int age;
+  int score;
 
-  Book(this.title, this.pages);
+  Student(this.name, this.age, this.score);
 
   void showInfo() {
-    print("$title - $pages pages");
+    print("Name: $name");
+    print("Age: $age");
+    print("Score: $score");
   }
 }
 
 void main() {
-  Book book = Book("Dune", 412);
+  Student student = Student("Alex", 18, 90);
 
-  print(book.title);
-  book.showInfo();
+  student.showInfo();
 }
