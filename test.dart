@@ -1,19 +1,9 @@
-class Student {
-  String name;
-  int age;
-  int score;
-
-  Student(this.name, this.age, this.score);
-
-  void showInfo() {
-    print("Name: $name");
-    print("Age: $age");
-    print("Score: $score");
-  }
-}
-
 void main() {
-  Student student = Student("Alex", 18, 90);
+  double p = 1000; 
+  double t = 2;    
+  double r = 5;    
 
-  student.showInfo();
+  double interest = (p * t * r) / 100;
+
+  print("Simple Interest: $interest");
 }
