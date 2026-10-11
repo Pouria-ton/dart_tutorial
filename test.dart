@@ -1,6 +1,5 @@
-void main() {
-int num1 = 10;
-int num2 = 15;
-int max = (num1 > num2) ? num1 : num2;
-print("its $max.");
-}
+void main(){
+  var selection = 2;
+  var output = (selection == 2) ? "Apple" : "Banana";
+  print("The selected fruit is $output.");
+  }
