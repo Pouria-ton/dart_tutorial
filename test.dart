@@ -1,5 +1,12 @@
 void main(){
-  var selection = 2;
-  var output = (selection == 2) ? "Apple" : "Banana";
-  print("The selected fruit is $output.");
+
+  int total = 0;
+  int n = 100; 
+  
+  for(int i=1; i<=n; i++){
+    total = total + i;
   }
+  
+  print("Total is $total");
+  
+}
