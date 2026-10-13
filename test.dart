@@ -1,14 +1,9 @@
 void main() {
-  String character = "a";
+ String name = "Bob";
 
-  if (character == "a" ||
-      character == "e" ||
-      character == "i" ||
-      character == "o" ||
-      character == "u") {
-    print("Vowel");
-  } else {
-    print("Consonant");
+  for (int i = 0; i < 100; i++) {
+    print(name);
   }
+
 
 }
