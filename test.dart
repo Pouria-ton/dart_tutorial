@@ -1,9 +1,14 @@
 void main() {
-  int number = 7;
+  String character = "a";
 
-  if (number % 2 == 0) {
-    print("Even");
+  if (character == "a" ||
+      character == "e" ||
+      character == "i" ||
+      character == "o" ||
+      character == "u") {
+    print("Vowel");
   } else {
-    print("Odd");
+    print("Consonant");
   }
+
 }
