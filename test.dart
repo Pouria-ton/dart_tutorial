@@ -1,9 +1,13 @@
 void main() {
- String name = "Bob";
-
-  for (int i = 0; i < 100; i++) {
-    print(name);
-  }
-
-
+  printEvenNumbers();
 }
+
+void printEvenNumbers() {
+  for (int i = 0; i <= 10; i++) {
+    if (i % 2 == 0) {
+      print(i);
+    }
+  }
+}
+
+
