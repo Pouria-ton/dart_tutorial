@@ -1,12 +1,8 @@
 void main() {
-  printEvenNumbers();
-}
+  Set<String> fruits = {"apple", "banana", "orange"};
 
-void printEvenNumbers() {
-  for (int i = 0; i <= 10; i++) {
-    if (i % 2 == 0) {
-      print(i);
-    }
+  for (String fruit in fruits) {
+    print(fruit);
   }
 }
 
