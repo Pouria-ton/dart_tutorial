@@ -1,9 +1,18 @@
 void main() {
-  Set<String> fruits = {"apple", "banana", "orange"};
+  List<String> friends = [
+    "Alex",
+    "Anna",
+    "Bob",
+    "Adam",
+    "Mia",
+    "Amy",
+    "Leo"
+  ];
 
-  for (String fruit in fruits) {
-    print(fruit);
-  }
+  var namesStartingWithA =
+      friends.where((name) => name.startsWith("A")).toList();
+
+  print(namesStartingWithA);
 }
 
 
