@@ -1,16 +1,20 @@
-class Customer {
-  final String name;
-  final int age;
-  final String phone;
+class NoteBook {
 
-  const Customer(this.name, this.age, this.phone);
+  String? _name;
+  double? _prize;
+
+  NoteBook(this._name, this._prize);
+  String get name => this._name!;
+  double get price => this._prize!;
 }
 
 void main() {
-  const Customer customer = Customer("Alex", 20, "123456789");
+  NoteBook nb = new NoteBook("Dell", 500);
 
-  print(customer.name);
-  print(customer.age);
-  print(customer.phone);
+  print(nb.name);
+  print(nb.price);
+
+
+
 }
 
