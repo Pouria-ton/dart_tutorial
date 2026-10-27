@@ -3,16 +3,28 @@ class NoteBook {
   String? _name;
   double? _prize;
 
-  NoteBook(this._name, this._prize);
-  String get name => this._name!;
-  double get price => this._prize!;
+  set name(String name) => _name = name;
+
+  set price(double price) {
+    if (price < 0) {
+      throw Exception("Price cannot be less than 0");
+    }
+    this._prize = price;
+  }
+  void display() {
+    print("Name: $_name");
+    print("Price: $_prize");
+  }
 }
+void main(){
 
-void main() {
-  NoteBook nb = new NoteBook("Dell", 500);
+  NoteBook nb = new NoteBook();
 
-  print(nb.name);
-  print(nb.price);
+  nb.name = "Dell";
+  nb.price = 250;
+
+  nb.display();
+
 
 
 
