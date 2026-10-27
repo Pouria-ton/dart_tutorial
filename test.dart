@@ -1,32 +1,35 @@
-class NoteBook {
+class Student {
 
-  String? _name;
-  double? _prize;
+ String? _firstName;
+ String? _lastName;
+ int? _age;
 
-  set name(String name) => _name = name;
+ String get fullName => this._firstName! + " " + 
+this._lastName!;
 
-  set price(double price) {
-    if (price < 0) {
-      throw Exception("Price cannot be less than 0");
-    }
-    this._prize = price;
+int get age => this._age!;
+
+set firstName(String firstName) => this._firstName = firstName;
+
+set lastName(String lastName) => this._lastName = lastName;
+
+set age(int age) {
+  if (age < 0) {
+    throw new Exception("Age can't be less than 0");
   }
-  void display() {
-    print("Name: $_name");
-    print("Price: $_prize");
-  }
+  this._age = age;
+}
+
 }
 void main(){
 
-  NoteBook nb = new NoteBook();
+  Student st = new Student();
 
-  nb.name = "Dell";
-  nb.price = 250;
+  st.firstName = "John";
+  st.lastName = "Doe";
+  st.age = 20;
 
-  nb.display();
-
-
-
-
+  print("Full Name: ${st.fullName}");
+  print("Age: ${st.age}");
 }
 
