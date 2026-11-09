@@ -1,35 +1,18 @@
-class Student {
+class Car {
+  int noOfSeats = 4;
+}
 
- String? _firstName;
- String? _lastName;
- int? _age;
+class Tesla extends Car {
+  int noOfSeats = 6;
 
- String get fullName => this._firstName! + " " + 
-this._lastName!;
-
-int get age => this._age!;
-
-set firstName(String firstName) => this._firstName = firstName;
-
-set lastName(String lastName) => this._lastName = lastName;
-
-set age(int age) {
-  if (age < 0) {
-    throw new Exception("Age can't be less than 0");
+  void display() {
+    print("No of seats in Tesla: $noOfSeats");
+    print("No of seats in Car: ${super.noOfSeats}");
   }
-  this._age = age;
 }
 
-}
-void main(){
-
-  Student st = new Student();
-
-  st.firstName = "John";
-  st.lastName = "Doe";
-  st.age = 20;
-
-  print("Full Name: ${st.fullName}");
-  print("Age: ${st.age}");
+void main() {
+  var tesla = Tesla();
+  tesla.display();
 }
 
