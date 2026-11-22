@@ -1,18 +1,21 @@
-class Car {
-  int noOfSeats = 4;
+class Employee {
+
+static int count = 0;
+
+Employee() {
+  count++;
 }
 
-class Tesla extends Car {
-  int noOfSeats = 6;
-
-  void display() {
-    print("No of seats in Tesla: $noOfSeats");
-    print("No of seats in Car: ${super.noOfSeats}");
-  }
+void totalEmployee() {
+  print("Total Employee: $count");
+}
 }
 
 void main() {
-  var tesla = Tesla();
-  tesla.display();
+  Employee e1 = new Employee();
+  e1.totalEmployee();
+  Employee e2 = new Employee();
+  e2.totalEmployee();
+  Employee e3 = new Employee();
+  e3.totalEmployee();
 }
-
