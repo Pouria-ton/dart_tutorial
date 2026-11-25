@@ -1,21 +1,43 @@
-class Employee {
+abstract class Bank {
+  String name;
+  double rate;
 
-static int count = 0;
+  Bank(this.name, this.rate);
 
-Employee() {
-  count++;
+  void interest();
+
+  void display() {
+    print("Bank Name: $name");
+  }
 }
 
-void totalEmployee() {
-  print("Total Employee: $count");
+class SBI extends Bank {
+
+  SBI(String name, double rate) : super(name, rate);
+
+  @override
+  void interest() {
+    print("The rate of interest of SBI is $rate");
+  }
 }
+
+class ICICI extends Bank {
+
+  ICICI(String name, double rate) : super(name, rate);
+
+  @override
+  void interest() {
+    print("The rate of interest of ICICI is $rate");
+  }
 }
 
 void main() {
-  Employee e1 = new Employee();
-  e1.totalEmployee();
-  Employee e2 = new Employee();
-  e2.totalEmployee();
-  Employee e3 = new Employee();
-  e3.totalEmployee();
+  SBI sbi = SBI("SBI", 8.4);
+  ICICI icici = ICICI("ICICI", 7.3);
+
+  sbi.interest();
+  icici.interest();
+  icici.display();
 }
+
+
